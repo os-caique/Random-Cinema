@@ -6,11 +6,11 @@
 
 ## Sobre
 
-O **Cinema Aleatório** é uma API que resolve o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) (Schwartz, 2004) no universo cinematográfico. O projeto oferece recomendações de filmes que combinam aleatoriedade com qualidade garantida, eliminando a sobrecarga de decisão para os usuários.
+O **Cinema Aleatório** é uma API que resolve o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) (Schwartz, 2004) no universo cinematográfico. O projeto oferece recomendações de filmes que combinam aleatoriedade e qualidade, eliminando a sobrecarga de decisão para os usuários.
 
 ## Características
 
-- Sistema de Avaliação com [ajuste bayesiano](https://en.wikipedia.org/wiki/Rule_of_succession)
+- Sistema de Avaliação com [Ajuste Bayesiano](https://en.wikipedia.org/wiki/Rule_of_succession)
 - Filtragem por Gênero de Filme
 - Onion Architecture
 - API RESTful MVC
