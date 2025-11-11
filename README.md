@@ -37,4 +37,5 @@ dotnet restore
 
 dotnet run
 ```
-Acesse http://localhost:5019
+E por fim acesse:
+http://localhost:5019
