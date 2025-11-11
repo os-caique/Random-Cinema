@@ -10,15 +10,11 @@ O **Cinema Aleatório** é uma API inteligente que resolve o [**paradoxo da esco
 
 ## Características
 
-### Sistema de Avaliação com [ajuste bayesiano](https://en.wikipedia.org/wiki/Rule_of_succession)
-
-### Filtragem por Gênero de Filme
-
-### Onion Architecture
-
-### API RESTful MVC
-
-### Interface básica com Vue.js
+- Sistema de Avaliação com [ajuste bayesiano](https://en.wikipedia.org/wiki/Rule_of_succession)
+- Filtragem por Gênero de Filme
+- Onion Architecture
+- API RESTful MVC
+- Interface básica com Vue.js
 
 ## Tecnologias
 
@@ -35,7 +31,7 @@ O **Cinema Aleatório** é uma API inteligente que resolve o [**paradoxo da esco
 
 ```bash
 git clone https://github.com/os-caique/random-cinema.git
-cd cinema-aleatorio
+cd random-cinema
 
 dotnet restore
 
