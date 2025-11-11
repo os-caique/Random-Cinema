@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "x4VSFhlfWPU=",
+  "success": true,
+  "projectFilePath": "/home/dev/Desenvolvimento/C#/RandomCinema/RandomCinema.csproj",
+  "expectedPackageFiles": [
+    "/home/dev/.nuget/packages/microsoft.aspnetcore.openapi/9.0.10/microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
+    "/home/dev/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/home/dev/.nuget/packages/newtonsoft.json/13.0.4/newtonsoft.json.13.0.4.nupkg.sha512",
+    "/home/dev/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
