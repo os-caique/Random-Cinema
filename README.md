@@ -6,7 +6,7 @@
 
 ## Sobre
 
-O **Cinema Aleatório** é uma API inteligente que resolve o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) (Schwartz, 2004) no universo cinematográfico. O projeto oferece recomendações de filmes que combinam aleatoriedade com qualidade garantida, eliminando a sobrecarga de decisão para os usuários.
+O **Cinema Aleatório** é uma API que resolve o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) (Schwartz, 2004) no universo cinematográfico. O projeto oferece recomendações de filmes que combinam aleatoriedade com qualidade garantida, eliminando a sobrecarga de decisão para os usuários.
 
 ## Características
 
