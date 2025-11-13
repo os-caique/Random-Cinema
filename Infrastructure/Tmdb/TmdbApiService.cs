@@ -25,6 +25,7 @@ public class TmdbApiService : ITmdbApiService
     public async Task<List<Movie>> GetMoviesByVoteCountDescAsync(string genre, int page)
     {
         var url = $"{_config.BaseUrl}discover/movie?sort_by=vote_count.desc&page={page}";
+        url += $"&language=pt-BR";
         
         if (!string.IsNullOrEmpty(genre))
         {
@@ -46,6 +47,7 @@ public class TmdbApiService : ITmdbApiService
             Overview = m.Overview,
             Rating = m.VoteAverage,
             VoteCount = m.VoteCount,
+            OriginalLanguage = m.OriginalLanguage,
             ReleaseDate = DateTime.Parse(m.ReleaseDate),
             PosterPath = m.PosterPath
         }).ToList() ?? new List<Movie>();

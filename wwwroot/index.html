@@ -3,65 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Cinema - Recomendador de Filmes</title>
+    <title>Cinema Aleatório - Recomendador de Filmes</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 <div id="app">
-    <header>
-        <h1>🎬 Random Cinema</h1>
-        <p> Menos escolhas, decisões mais rápidas. Economize tempo com recomendações aleatórias de filmes.</p>
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <h1>CINE ALEATÓRIO</h1>
+                <p>Menos escolhas, decisões mais rápidas. Economize tempo com recomendações aleatórias de filmes.</p>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <div class="controls">
-            <div class="input-group">
-                <label for="genre">Gênero:</label>
-                <select id="genre" v-model="selectedGenre">
-                    <option value="">Todos os Gêneros</option>
-                    <option v-for="genre in genres" :key="genre.id" :value="genre.id">
-                        {{ genre.name }}
-                    </option>
-                </select>
-            </div>
+    <main class="main">
+        <div class="container">
+            <section class="controls-section">
+                <div class="controls-card">
+                    <div class="controls-grid">
+                        <div class="input-group">
+                            <label for="genre">Filtrar por gênero</label>
+                            <select id="genre" v-model="selectedGenre" class="styled-select">
+                                <option value="">Todos os Gêneros</option>
+                                <option v-for="genre in genres" :key="genre.id" :value="genre.id">
+                                    {{ genre.name }}
+                                </option>
+                            </select>
+                        </div>
 
-            <div class="input-group">
-                <label for="quantity">Quantidade:</label>
-                <input type="number" id="quantity" v-model="quantity" min="1" max="10">
-            </div>
-
-            <button @click="getRecommendations" :disabled="loading">
-                {{ loading ? 'Carregando...' : '🎲 Recomendar Filmes' }}
-            </button>
-        </div>
-
-        <div v-if="error" class="error">
-            {{ error }}
-        </div>
-
-        <div v-if="movies.length > 0" class="results">
-            <h2>Recomendações ({{ movies.length }} filmes)</h2>
-            <div class="movies-grid">
-                <div v-for="movie in movies" :key="movie.id" class="movie-card">
-                    <div class="movie-poster">
-                        <img v-if="movie.posterPath"
-                             :src="'https://image.tmdb.org/t/p/w200' + movie.posterPath"
-                             :alt="movie.title">
-                        <div v-else class="no-poster">Sem Poster</div>
-                    </div>
-                    <div class="movie-info">
-                        <h3>{{ movie.title }}</h3>
-                        <p class="overview">{{ truncateText(movie.overview, 150) }}</p>
-                        <div class="movie-details">
-                            <span class="rating">⭐ {{ movie.rating.toFixed(1) }}</span>
-                            <span class="year">{{ new Date(movie.releaseDate).getFullYear() }}</span>
+                        <div class="button-group">
+                            <button @click="getRecommendations" :disabled="loading" class="recommend-btn">
+                                <span v-if="loading" class="loading-spinner"></span>
+                                {{ loading ? 'Buscando filmes...' : 'Iniciar Busca' }}
+                            </button>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <div v-if="error" class="error-message">
+                <div class="error-icon">⚠️</div>
+                <p>{{ error }}</p>
             </div>
+
+            <section v-if="movies.length > 0" class="results-section">
+                <div class="section-header">
+                    <h2>Sua Seleção Improvável</h2>
+                </div>
+
+                <div class="movies-grid">
+                    <div v-for="movie in movies" :key="movie.id" class="movie-card">
+                        <div class="movie-poster">
+                            <img v-if="movie.posterPath"
+                                 :src="'https://image.tmdb.org/t/p/w300' + movie.posterPath"
+                                 :alt="movie.title"
+                                 @error="handleImageError">
+                            <div v-else class="no-poster">
+                                <span>🎬</span>
+                                <p>Cartaz Indisponível</p>
+                            </div>
+                            <div class="movie-overlay">
+                                <button class="play-btn">▶</button>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">{{ movie.title }}</h3>
+                            <p class="overview" :class="{ expanded: movie.showFullOverview }">
+                                {{ movie.showFullOverview ? movie.overview : truncateText(movie.overview, 120) }}
+                            </p>
+                            <button v-if="movie.overview && movie.overview.length > 120"
+                                    @click="toggleOverview(movie)"
+                                    class="read-more">
+                                {{ movie.showFullOverview ? 'Ler menos' : 'Ler mais' }}
+                            </button>
+                            <div class="movie-details">
+                                <div class="movie-meta">
+                                    <div class="language">
+                                        <i class="fas fa-globe"></i>
+                                        {{ getLanguageName(movie.originalLanguage) }}
+                                    </div>
+                                </div>
+                                <span class="year">{{ new Date(movie.releaseDate).getFullYear() }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section v-else-if="!loading && !error" class="empty-state">
+                <div class="empty-icon">🎭</div>
+                <h3>Nenhum filme na programação</h3>
+                <p>Ajuste os filtros e inicie uma nova sessão</p>
+            </section>
         </div>
     </main>
+
+    <!-- Modal para descrição completa -->
+    <div v-if="selectedMovie" class="modal-overlay" @click="closeModal">
+        <div class="modal-content" @click.stop>
+            <div class="modal-header">
+                <h3 class="modal-title">{{ selectedMovie.title }}</h3>
+                <button class="close-btn" @click="closeModal">&times;</button>
+            </div>
+            <p class="modal-overview">{{ selectedMovie.overview }}</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Cinema Aleatório &copy; 2025 - A escolha certa pode vir do inesperado.</p>
+        </div>
+    </footer>
 </div>
 
 <script src="js/app.js"></script>

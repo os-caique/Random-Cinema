@@ -93,6 +93,7 @@
 /home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/RandomCinema.pdb
 /home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/RandomCinema.genruntimeconfig.cache
 /home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/ref/RandomCinema.dll
-/home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/compressed/xiotbllhjl-wf1j61trz1.gz
-/home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/compressed/mhah4cjgxn-lckkmz9qm1.gz
-/home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/compressed/snb2ykpglv-3rpt2xd0la.gz
+/home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/RandomCinema.sourcelink.json
+/home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/compressed/xiotbllhjl-n3ri6kftxi.gz
+/home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/compressed/mhah4cjgxn-gv4922q0vl.gz
+/home/dev/Desenvolvimento/C#/RandomCinema/obj/Debug/net9.0/compressed/snb2ykpglv-4wwiyeiu2t.gz

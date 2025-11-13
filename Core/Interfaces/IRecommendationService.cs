@@ -4,5 +4,5 @@ namespace RandomCinema.Core.Interfaces;
 
 public interface IRecommendationService
 {
-    Task<List<Movie>> GetRandomMovieAsync(string genre, int quantity = 4);
+    Task<List<Movie>> GetRandomMovieAsync(string genre, int quantity);
 }

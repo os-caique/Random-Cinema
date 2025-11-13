@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RandomCinema")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc0cb18fcf9d7c56f06bf63ff6cc825b8f3ccff2")]
 [assembly: System.Reflection.AssemblyProductAttribute("RandomCinema")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RandomCinema")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

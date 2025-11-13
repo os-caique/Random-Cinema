@@ -19,7 +19,7 @@ public class RecommendationController : ControllerBase, IRecommendationControlle
     {
         try
         {
-            var movie = await _recommendationService.GetRandomMovieAsync(genre);
+            var movie = await _recommendationService.GetRandomMovieAsync(genre, 3);
             return Ok(movie);
         }
         catch (Exception ex)

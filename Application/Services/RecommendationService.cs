@@ -6,7 +6,7 @@ namespace RandomCinema.Application.Services;
 
 public class RecommendationService : IRecommendationService
 {
-    private readonly int MAX_ATTEMPTS = 5;
+    private readonly int MAX_ATTEMPTS = 10;
     private readonly ITmdbApiService _tmdbService;
 
     public RecommendationService(ITmdbApiService tmdbService)
@@ -14,7 +14,7 @@ public class RecommendationService : IRecommendationService
         _tmdbService = tmdbService;
     }
 
-    public async Task<List<Movie>> GetRandomMovieAsync(string genre, int quantity = 4)
+    public async Task<List<Movie>> GetRandomMovieAsync(string genre, int quantity)
     {
         var movies = new List<Movie>();
         var attempts = 0;
@@ -34,9 +34,9 @@ public class RecommendationService : IRecommendationService
     
     private int GetRandomPageByAttempt(int attempt)
     {
-        // Adjust randomness based on attempt number
+        int PAGE_LIMIT = 500;
         var random = new Random();
-        return random.Next(1, 5 + attempt); // Expands search range with each attempt
+        return random.Next(1, PAGE_LIMIT/attempt);
     }
 
     private List<Movie> FilterMoviesByScore(List<Movie> movies)
@@ -48,6 +48,7 @@ public class RecommendationService : IRecommendationService
 
     private void AddRecommendedMovies(List<Movie> accumulatedMovies, List<Movie> newMovies, int maxQuantity)
     {
+        ListAlgorithms.Shuffle(newMovies);
         foreach (var movie in newMovies)
         {
             if (accumulatedMovies.Count >= maxQuantity) break;

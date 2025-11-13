@@ -19,6 +19,9 @@ public class TmdbMovie
     [JsonPropertyName("vote_count")]
     public int VoteCount { get; set; }
     
+    [JsonPropertyName("original_language")]
+    public String OriginalLanguage { get; set; }
+    
     [JsonPropertyName("release_date")]
     public string ReleaseDate { get; set; } = string.Empty;
     
