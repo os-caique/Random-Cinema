@@ -6,19 +6,15 @@
 
 ## Sobre
 
-O **Cinema Aleatório** é uma API inteligente que resolve o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) (Schwartz, 2004) no universo cinematográfico. O projeto oferece recomendações de filmes que combinam aleatoriedade com qualidade garantida, eliminando a sobrecarga de decisão para os usuários.
+O **Cinema Aleatório** é uma API que resolve o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) (Schwartz, 2004) no universo cinematográfico. O projeto oferece recomendações de filmes que combinam aleatoriedade e qualidade, eliminando a sobrecarga de decisão para os usuários.
 
 ## Características
 
-### Sistema de Avaliação com [ajuste bayesiano](https://en.wikipedia.org/wiki/Rule_of_succession)
-
-### Filtragem por Gênero de Filme
-
-### Onion Architecture
-
-### API RESTful MVC
-
-### Interface básica com Vue.js
+- Sistema de Avaliação com [Ajuste Bayesiano](https://en.wikipedia.org/wiki/Rule_of_succession)
+- Filtragem por Gênero de Filme
+- Onion Architecture
+- API RESTful MVC
+- Interface básica com Vue.js
 
 ## Tecnologias
 
@@ -35,9 +31,11 @@ O **Cinema Aleatório** é uma API inteligente que resolve o [**paradoxo da esco
 
 ```bash
 git clone https://github.com/os-caique/random-cinema.git
-cd cinema-aleatorio
+cd random-cinema
 
 dotnet restore
 
 dotnet run
 ```
+E por fim acesse:
+http://localhost:5019
