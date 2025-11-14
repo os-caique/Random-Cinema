@@ -34,6 +34,9 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Add this to force port 5019
+// builder.WebHost.UseUrls("http://localhost:5019/");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline

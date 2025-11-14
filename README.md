@@ -27,15 +27,20 @@ O **Cinema Aleatório** é uma API que resolve o [**paradoxo da escolha**](https
 - ASP.NET Core
 - Vue.js 3
 
+
+### Prérequisitos
+- installed on your machine[Docker](https://docs.docker.com/get-docker/)
+
+
 ## Como Executar
 
-```bash
-git clone https://github.com/os-caique/random-cinema.git
-cd random-cinema
+1. **Construa a imagem Docker:**
+   ```bash
+   docker build -t randomcinema .
 
-dotnet restore
+2. **Execute o container:**
+   ```bash
+   docker run -p 8080:8080 randomcinema
 
-dotnet run
-```
-E por fim acesse:
-http://localhost:5019
+3. **Acesse a aplicação:**
+ - Abra seu browser e entre através de: ```bash http://localhost:8080 ``
