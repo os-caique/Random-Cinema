@@ -43,4 +43,4 @@ O **Cinema Aleatório** é uma API que resolve o [**paradoxo da escolha**](https
    docker run -p 8080:8080 randomcinema
 
 3. **Acesse a aplicação:**
- - Abra seu browser e entre através de: ```bash http://localhost:8080 ``
+ - Abra seu browser e entre através de: ```http://localhost:8080```
