@@ -1,0 +1,15 @@
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/bin/Debug/net9.0/Application.deps.json
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/bin/Debug/net9.0/Application.dll
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/bin/Debug/net9.0/Application.pdb
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/bin/Debug/net9.0/Core.dll
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/bin/Debug/net9.0/Core.pdb
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Application.csproj.AssemblyReference.cache
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Application.AssemblyInfoInputs.cache
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Application.AssemblyInfo.cs
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Application.csproj.CoreCompileInputs.cache
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Applicat.44B5EDA2.Up2Date
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Application.dll
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/refint/Application.dll
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/Application.pdb
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Application/obj/Debug/net9.0/ref/Application.dll

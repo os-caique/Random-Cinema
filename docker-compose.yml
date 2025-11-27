@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  your-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5019:5019"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:5019
+    volumes:
+      - ./appsettings.json:/app/appsettings.json
+    restart: unless-stopped
