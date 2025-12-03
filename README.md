@@ -1,46 +1,62 @@
 # 🎬 Cinema Aleatório
 
 [![C#](https://img.shields.io/badge/C%23-9.0-purple.svg)](https://dotnet.microsoft.com/)
+[![.NET](https://img.shields.io/badge/.NET-6.0-512BD4.svg)](https://dotnet.microsoft.com/)
 [![API](https://img.shields.io/badge/API-RESTful-green.svg)](https://restfulapi.net/)
 [![Architecture](https://img.shields.io/badge/Architecture-Onion-orange.svg)](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED.svg)](https://www.docker.com/)
 
-## Sobre
+## Sobre o Projeto
 
-O **Cinema Aleatório** é uma API que resolve o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) (Schwartz, 2004) no universo cinematográfico. O projeto oferece recomendações de filmes que combinam aleatoriedade e qualidade, eliminando a sobrecarga de decisão para os usuários.
+O **Cinema Aleatório** é uma API RESTful desenvolvida para resolver o [**paradoxo da escolha**](https://www.bbc.com/portuguese/articles/cvgqj3ezllpo) no contexto cinematográfico. Inspirado na teoria de Barry Schwartz (2004), o sistema combina aleatoriedade controlada com um mecanismo de avaliação baseado em estatística bayesiana para oferecer recomendações cinematográficas relevantes, reduzindo a sobrecarga de decisão dos usuários.
 
 ## Características
 
-- Sistema de Avaliação com [Ajuste Bayesiano](https://en.wikipedia.org/wiki/Rule_of_succession)
+- Seleção Aleatória das páginas de filmes através da TMDB API
 - Filtragem por Gênero de Filme
-- Onion Architecture
-- API RESTful MVC
-- Interface básica com Vue.js
+- API com endpoints conforme o padrão RESTfull
+- Uso da Regra de Sucessão de Laplace para redução de viés
 
 ## Tecnologias
 
-### Requisitos do Sistema
-- **C# 9.0+**
-- **.NET 6.0+**
-- **Git**
+### Backend
+- **Linguagem**: C# 9.0+
+- **Framework**: .NET 6.0
+- **Arquitetura**: Onion Architecture
+- **APIs**: RESTful com ASP.NET Core MVC
 
-### Frameworks e Bibliotecas
-- ASP.NET Core
-- Vue.js 3
-
-
-### Prérequisitos
-- installed on your machine[Docker](https://docs.docker.com/get-docker/)
+### Frontend
+- **Framework**: Vue.js 3
+- **Tipo**: Interface básica para demonstração das funcionalidades
 
 
 ## Como Executar
 
-1. **Construa a imagem Docker:**
-   ```bash
-   docker build -t randomcinema .
+### Pré-requisitos
+- [Docker](https://docs.docker.com/get-docker/) instalado
+- Git para clonar o repositório
 
-2. **Execute o container:**
-   ```bash
-   docker run -p 8080:8080 randomcinema
+### Passo-a-passo
 
-3. **Acesse a aplicação:**
- - Abra seu browser e entre através de: ```http://localhost:8080```
+1. Clonar o repositório
+```
+git clone https://github.com/os-caique/Random-Cinema
+```
+
+2. Navegar para o diretório do projeto
+```
+cd cinema-aleatorio
+```
+
+3. Construir com Docker
+```
+docker build -t random-cinema .
+```
+
+4. Executar a API
+```
+docker run -p 5019:8080 random-cinema
+```
+
+5. Acessar a aplicação em: 
+http://localhost:5019
