@@ -9,3 +9,4 @@
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/Core/obj/Debug/net9.0/refint/Core.dll
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/Core/obj/Debug/net9.0/Core.pdb
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/Core/obj/Debug/net9.0/ref/Core.dll
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/Core/obj/Debug/net9.0/Core.sourcelink.json

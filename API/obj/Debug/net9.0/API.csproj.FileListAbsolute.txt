@@ -23,7 +23,6 @@
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/tu8l88kzq7-n3ri6kftxi.gz
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/6x0scahnf1-61n19gt1b8.gz
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/1dpm1p8bmc-gv4922q0vl.gz
-/home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/3q7wejoiqi-4wwiyeiu2t.gz
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/vhe5cm8uz3-bqjiyaj88i.gz
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/syn4qnh0qq-c2jlpeoesf.gz
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/7viw9v0bqa-erw9l3u2r3.gz
@@ -98,3 +97,5 @@
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/API.pdb
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/API.genruntimeconfig.cache
 /home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/ref/API.dll
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/API.sourcelink.json
+/home/dev/Desenvolvimento/C#/RandomCinemaApi/API/obj/Debug/net9.0/compressed/3q7wejoiqi-vrj4zlld21.gz

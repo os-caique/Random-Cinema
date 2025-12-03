@@ -1,5 +1,5 @@
+using Application.Services;
 using Infrastructure.Tmdb;
-using RandomCinema.Application.Services;
 using RandomCinema.Core.Interfaces;
 using RandomCinema.Infrastructure.Models;
 
@@ -14,28 +14,23 @@ builder.Services.AddLogging();
 builder.Services.Configure<TmdbConfig>(
     builder.Configuration.GetSection("Tmdb"));
 
-// Register HttpClient for TMDB API
-builder.Services.AddHttpClient<ITmdbApiService, TmdbApiService>(client =>
-{
-    // Base address will be set in TmdbApiService using TmdbConfig
-});
-
-// Register application services
-builder.Services.AddScoped<IRecommendationService, RecommendationService>();
-
 // Add CORS if needed for your Vue.js frontend
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowVueApp", policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "http://localhost:5019") // Vue dev server
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5019")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
 
-// Add this to force port 5019
-// builder.WebHost.UseUrls("http://localhost:5019/");
+// Register HttpClient
+builder.Services.AddHttpClient();
+
+// Register application services
+builder.Services.AddScoped<IRecommendationService, RecommendationService>();
+builder.Services.AddScoped<ITmdbApiService, TmdbApiService>();
 
 var app = builder.Build();
 
@@ -44,11 +39,19 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+else
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
 
 app.UseCors("AllowVueApp");
-app.UseStaticFiles(); // For serving Vue.js files from wwwroot
+
+app.UseDefaultFiles(); 
+app.UseStaticFiles();  
 
 app.UseRouting();
+
 app.MapControllers();
 
 app.MapFallbackToFile("index.html");

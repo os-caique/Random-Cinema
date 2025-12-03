@@ -2,7 +2,7 @@ using RandomCinema.Application.Utils;
 using RandomCinema.Core.Interfaces;
 using RandomCinema.Core.Models;
 
-namespace RandomCinema.Application.Services;
+namespace Application.Services;
 
 public class RecommendationService : IRecommendationService
 {
@@ -34,9 +34,11 @@ public class RecommendationService : IRecommendationService
     
     private int GetRandomPageByAttempt(int attempt)
     {
-        int PAGE_LIMIT = 500;
         var random = new Random();
-        return random.Next(1, PAGE_LIMIT/attempt);
+        // Page limit list according to the atempt counter to enhace the change of drawing a good movie.
+        int[] pageDrawSubspace = [500, 300, 200, 160, 120, 80, 70, 60, 50, 25];
+        
+        return random.Next(1, pageDrawSubspace[attempt-1]);
     }
 
     private List<Movie> FilterMoviesByScore(List<Movie> movies)
